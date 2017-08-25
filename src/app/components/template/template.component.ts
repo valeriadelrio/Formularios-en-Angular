@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-template',
@@ -7,11 +8,18 @@ import { Component } from '@angular/core';
 })
 export class TemplateComponent{
 
+  usuario:Object ={
+    nombre: "Valeria",
+    apellido: "del Rio",
+    correo: ""
+  }
   constructor() { }
 
 
-  guardar(){
-    console.log("Formulario posteado")
+  guardar(forma:NgForm){
+    console.log("Formulario posteado");
+    console.log("ngForm", forma);
+    console.log("valor", forma.value);
   }
 
 }
