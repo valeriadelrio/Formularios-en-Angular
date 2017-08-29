@@ -4,14 +4,14 @@
 
   <div formGroupName = "nombrecompleto">
 
-    <div class="form-group row" [ngClass]="{'was-validated':!forma.get('nombrecompleto.nombre').touched , 'has-danger ': !forma.controls['nombrecompleto'].controls['nombre'].valid}">
+    <div class="form-group row" [ngClass]="{'was-validated':forma.get('nombrecompleto.nombre').touched , 'has-danger ': !forma.controls['nombrecompleto'].controls['nombre'].valid}">
       <label class="col-2 col-form-label">Nombre</label>
       <div class="col-8">
 
         <input class="form-control"
                type="text"
                placeholder="Nombre"
-               formControlName="nombre">
+               formControlName="nombre" >
         <div *ngIf="forma.get('nombrecompleto.nombre').errors?.required"
              class="invalid-feedback">
             El nombre es necesario

@@ -35,9 +35,23 @@ export class DataComponent {
                                     ])
     })
 
+    this.forma.setValue(this.usuario);
+
   }
 
   guardarCambios(){
+    console.log(this.forma.value);
+    console.log(this.forma);
+    this.forma.reset({
+      nombrecompleto: {
+        nombre:"",
+        apellido:"",
+      },
+      correo:""
+    });
+
+    // this.forma.controls['correo'].setValue()
+
 
   }
 
